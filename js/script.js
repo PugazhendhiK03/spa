@@ -60,6 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Form validation
+            if (!validateContactForm()) {
+                return;
+            }
+            
             const formData = new FormData(this);
             const action = this.getAttribute('action');
             
@@ -86,12 +91,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    function validateContactForm() {
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+        let isValid = true;
+        
+        // Reset error states
+        name.style.borderColor = '#ddd';
+        email.style.borderColor = '#ddd';
+        message.style.borderColor = '#ddd';
+        
+        // Validate name
+        if (!name.value.trim()) {
+            name.style.borderColor = 'red';
+            isValid = false;
+        }
+        
+        // Validate email
+        if (!email.value.trim() || !isValidEmail(email.value)) {
+            email.style.borderColor = 'red';
+            isValid = false;
+        }
+        
+        // Validate message
+        if (!message.value.trim()) {
+            message.style.borderColor = 'red';
+            isValid = false;
+        }
+        
+        if (!isValid) {
+            alert('Please fill in all required fields correctly.');
+            return false;
+        }
+        
+        return true;
+    }
+    
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
     // Booking Form Multi-step
     const bookingForm = document.getElementById('bookingForm');
-    const formSteps = document.querySelectorAll('.form-step');
-    const steps = document.querySelectorAll('.step');
-    const nextButtons = document.querySelectorAll('.next-step');
-    const prevButtons = document.querySelectorAll('.prev-step');
     
     if (bookingForm) {
         // Initialize date picker
@@ -107,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Next button functionality
+        const nextButtons = document.querySelectorAll('.next-step');
         nextButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const currentStep = this.closest('.form-step');
@@ -119,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     nextStep.classList.add('active');
                     
                     // Update step indicators
+                    const steps = document.querySelectorAll('.step');
                     steps.forEach(step => {
                         if (parseInt(step.getAttribute('data-step')) <= nextStepNum) {
                             step.classList.add('active');
@@ -142,6 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Previous button functionality
+        const prevButtons = document.querySelectorAll('.prev-step');
         prevButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const currentStep = this.closest('.form-step');
@@ -152,6 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 prevStep.classList.add('active');
                 
                 // Update step indicators
+                const steps = document.querySelectorAll('.step');
                 steps.forEach(step => {
                     if (parseInt(step.getAttribute('data-step')) <= prevStepNum) {
                         step.classList.add('active');
@@ -173,40 +220,18 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const formData = new FormData(this);
-            const action = this.getAttribute('action');
             
-            fetch(action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Hide form and show success message
-                    bookingForm.style.display = 'none';
-                    const bookingSuccess = document.getElementById('bookingSuccess');
-                    bookingSuccess.style.display = 'block';
-                    
-                    // Populate success details
-                    document.getElementById('success-service').textContent = `Service: ${formData.get('service')}`;
-                    document.getElementById('success-date').textContent = `Date & Time: ${formData.get('date')} at ${formData.get('time')}`;
-                    document.getElementById('success-name').textContent = `Name: ${formData.get('name')}`;
-                    
-                    // Send WhatsApp message
-                    sendWhatsAppBooking(formData);
-                    
-                    // Reset form
-                    bookingForm.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                alert('There was a problem submitting your booking. Please try again later.');
-                console.error(error);
-            });
+            // 1. Send to Formspree (company email)
+            sendToFormspree(formData);
+            
+            // 2. Send WhatsApp notifications
+            sendWhatsAppNotifications(formData);
+            
+            // 3. Show success message
+            showBookingSuccess(formData);
+            
+            // 4. Reset form
+            bookingForm.reset();
         });
         
         // Terms and Policy modal links
@@ -284,32 +309,76 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('summary-phone').textContent = formData.get('phone');
     }
     
-    // Send WhatsApp booking confirmation
-    function sendWhatsAppBooking(formData) {
-        const whatsappNumber = formData.get('whatsapp') || formData.get('phone');
+    // Send booking data to Formspree
+    function sendToFormspree(formData) {
+        const formspreeUrl = 'https://formspree.io/f/manjegll';
+        const bookingData = {
+            _subject: 'New Booking - Serenity Spa',
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            whatsapp: formData.get('whatsapp') || 'Not provided',
+            service: formData.get('service'),
+            date: formData.get('date'),
+            time: formData.get('time'),
+            therapist: formData.get('therapist') || 'No preference',
+            notes: formData.get('notes') || 'None'
+        };
+        
+        fetch(formspreeUrl, {
+            method: 'POST',
+            body: JSON.stringify(bookingData),
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                console.error('Formspree submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting to Formspree:', error);
+        });
+    }
+    
+    // Send WhatsApp notifications
+    function sendWhatsAppNotifications(formData) {
+        const customerNumber = formData.get('whatsapp') || formData.get('phone');
         const service = formData.get('service');
         const date = formData.get('date');
         const time = formData.get('time');
         const name = formData.get('name');
         
-        if (whatsappNumber) {
+        // 1. Send to customer
+        if (customerNumber) {
+            const cleanNumber = customerNumber.replace(/\D/g, '');
             const message = `Hi ${name}, your booking for ${service} on ${date} at ${time} has been confirmed. Thank you for choosing Serenity Spa!`;
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-            
-            // Open WhatsApp in a new tab (actual sending would require WhatsApp Business API)
+            const whatsappUrl = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         }
         
-        // Also send to business WhatsApp
-        const businessMessage = `New booking:\nName: ${name}\nService: ${service}\nDate: ${date}\nTime: ${time}\nPhone: ${formData.get('phone')}\nEmail: ${formData.get('email')}`;
-        const encodedBusinessMessage = encodeURIComponent(businessMessage);
-        const businessWhatsappUrl = `https://wa.me/11234567890?text=${encodedBusinessMessage}`;
-        
-        // Open in new tab (in a real scenario, this would be an API call)
+        // 2. Send to business
+        const businessNumber = '917339541974';
+        const businessMessage = `*NEW BOOKING*\n\n*Name:* ${name}\n*Service:* ${service}\n*Date:* ${date}\n*Time:* ${time}\n*Phone:* ${formData.get('phone')}\n*Email:* ${formData.get('email')}\n*WhatsApp:* ${formData.get('whatsapp') || 'Not provided'}\n*Therapist Preference:* ${formData.get('therapist') || 'None'}\n*Notes:* ${formData.get('notes') || 'None'}`;
+        const businessWhatsappUrl = `https://wa.me/${businessNumber}?text=${encodeURIComponent(businessMessage)}`;
         window.open(businessWhatsappUrl, '_blank');
     }
     
+    // Show booking success message
+    function showBookingSuccess(formData) {
+        // Hide form and show success message
+        bookingForm.style.display = 'none';
+        const bookingSuccess = document.getElementById('bookingSuccess');
+        bookingSuccess.style.display = 'block';
+        
+        // Populate success details
+        document.getElementById('success-service').textContent = `Service: ${formData.get('service')}`;
+        document.getElementById('success-date').textContent = `Date & Time: ${formData.get('date')} at ${formData.get('time')}`;
+        document.getElementById('success-name').textContent = `Name: ${formData.get('name')}`;
+    }
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
