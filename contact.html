@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serenity Spa | Contact Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -31,143 +32,112 @@
     <section class="page-header">
         <div class="container">
             <h1>Contact Us</h1>
-            <p>We'd love to hear from you. Reach out with questions or to schedule your visit.</p>
+            <p>We'd love to hear from you. Reach out with questions, feedback, or to schedule your visit.</p>
         </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-info">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Address</h3>
-                            <p>123 Wellness Avenue<br>City, State 12345</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>(123) 456-7890</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@serenityspa.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Hours</h3>
-                            <p>Monday - Friday: 9am - 8pm<br>
-                            Saturday: 9am - 6pm<br>
-                            Sunday: 10am - 4pm</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>123 Spa Street<br>Relax City, RC 12345</p>
                 </div>
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject" name="subject">
-                                <option value="general">General Inquiry</option>
-                                <option value="booking">Booking Question</option>
-                                <option value="service">Service Question</option>
-                                <option value="feedback">Feedback</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>(123) 456-7890<br>Mon-Fri: 9am-8pm</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>info@serenityspa.com<br>We reply within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>+1 (123) 456-7890<br>Quick answers to your questions</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="map-section">
+    <section class="contact-form-section">
         <div class="container">
-            <h2 class="section-title">Find Us</h2>
+            <div class="form-container">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" action="https://formspree.io/f/xjvqjzqw" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="booking">Booking Question</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div id="formSuccess" class="form-success" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your message has been sent successfully. We'll get back to you soon.</p>
+                </div>
+            </div>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573291234!2d-73.98784492416496!3d40.74844097138982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689876918893!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215373510324!2d-73.9878449241644!3d40.74844097138983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689876423583!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
-    <section class="faq-section">
+    <section class="faq">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What should I bring to my appointment?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We provide all necessary amenities including robes, slippers, and towels. You may want to bring comfortable clothing to change into after your treatments. For massages, you'll be properly draped at all times, so undergarments are optional based on your comfort level.</p>
-                    </div>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">What are your COVID-19 safety measures?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>We follow all local health guidelines and have implemented additional safety measures including enhanced cleaning protocols, air purification systems, and optional mask requirements for clients and staff.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How early should I arrive for my appointment?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We recommend arriving 15-20 minutes before your scheduled appointment time. This allows you to complete any necessary paperwork, change into a robe, and relax in our lounge before your treatment begins.</p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Do I need to book in advance?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>While we do accept walk-ins when available, we highly recommend booking in advance to ensure you get your preferred time and service. Popular time slots often book up weeks in advance.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What is your cancellation policy?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We require 24 hours notice for cancellations or rescheduling. Appointments cancelled with less than 24 hours notice may be subject to a cancellation fee of 50% of the service price. No-shows will be charged the full price of the scheduled service.</p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What is your cancellation policy?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>We require 24 hours notice for cancellations or rescheduling. Late cancellations may result in a charge of 50% of the service price. No-shows will be charged the full amount.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do you offer gift certificates?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! Gift certificates are available for any amount or specific services. They can be purchased online or at our spa and never expire. Gift certificates make perfect gifts for birthdays, anniversaries, holidays, or just to show someone you care.</p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Do you offer gift certificates?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Yes! Gift certificates are available for any amount or specific services. They can be purchased online or at our spa and never expire. They make perfect gifts for any occasion.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Are gratuities included?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Gratuities are not included in our service prices but are greatly appreciated by our staff. A standard gratuity of 15-20% is customary for spa services, similar to restaurant tipping. You may add gratuity when booking online or provide it directly to your therapist.</p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What should I wear to my appointment?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Wear comfortable clothing. For massages and body treatments, you may undress to your level of comfort. We provide robes, slippers, and secure storage for your belongings.</p>
                 </div>
             </div>
         </div>
@@ -178,8 +148,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>Serenity Spa</h3>
-                    <p>Providing premium spa services to help you relax, rejuvenate, and renew.</p>
-                    <div class="social-icons">
+                    <p>Providing exceptional spa experiences since 2010. Our mission is to help you find balance and rejuvenation.</p>
+                    <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -192,31 +162,38 @@
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="booking.html">Booking</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3>Contact Info</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness Ave, City</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Spa Street, Relax City</li>
                         <li><i class="fas fa-phone"></i> (123) 456-7890</li>
                         <li><i class="fas fa-envelope"></i> info@serenityspa.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (123) 456-7890</li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Opening Hours</h3>
                     <ul>
-                        <li>Monday - Friday: 9am - 8pm</li>
-                        <li>Saturday: 9am - 6pm</li>
-                        <li>Sunday: 10am - 4pm</li>
+                        <li>Monday - Friday: 9:00 AM - 8:00 PM</li>
+                        <li>Saturday: 10:00 AM - 6:00 PM</li>
+                        <li>Sunday: 11:00 AM - 5:00 PM</li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Serenity Spa. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Serenity Spa. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/11234567890" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
