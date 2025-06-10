@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <header>
         <div class="container">
             <div class="logo">
@@ -117,7 +122,7 @@
                     <p>Select a therapist or let us assign the best available for your service</p>
                     <div class="therapist-selection">
                         <div class="therapist-option">
-                            <input type="radio" name="therapist" id="any" value="Any" checked>
+                            <input type="radio" name="therapist" id="any" value="Any Available Therapist" checked>
                             <label for="any">
                                 <h3>Any Available Therapist</h3>
                                 <p>We'll assign the best therapist for your selected service</p>
@@ -205,6 +210,10 @@
                             <input type="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-group">
+                            <label for="whatsapp">WhatsApp Number (optional)</label>
+                            <input type="tel" id="whatsapp" name="whatsapp">
+                        </div>
+                        <div class="form-group">
                             <label for="notes">Special Requests or Notes</label>
                             <textarea id="notes" name="notes" rows="3"></textarea>
                         </div>
@@ -263,6 +272,10 @@
                                 <span>Phone:</span>
                                 <span id="confirm-phone">Not provided</span>
                             </div>
+                            <div class="detail-item">
+                                <span>WhatsApp:</span>
+                                <span id="confirm-whatsapp">Not provided</span>
+                            </div>
                         </div>
                         <div class="form-navigation">
                             <button class="btn btn-outline prev-step" data-prev="4">Back</button>
@@ -279,9 +292,9 @@
                     <h2>Booking Confirmed!</h2>
                     <p>Your appointment has been successfully scheduled.</p>
                     <div class="booking-reference">
-                        <p>Your booking reference: <strong>SPA-2023-0567</strong></p>
+                        <p>Your booking reference: <strong id="booking-ref">SPA-2023-0567</strong></p>
                     </div>
-                    <p>A confirmation email has been sent to <strong id="success-email">your@email.com</strong> with all the details.</p>
+                    <p>A confirmation has been sent to <strong id="success-email">your@email.com</strong> with all the details.</p>
                     <a href="index.html" class="btn">Back to Home</a>
                 </div>
             </div>
@@ -316,6 +329,7 @@
                         <li><i class="fas fa-map-marker-alt"></i> 123 Wellness Ave, City</li>
                         <li><i class="fas fa-phone"></i> (123) 456-7890</li>
                         <li><i class="fas fa-envelope"></i> info@serenityspa.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (234) 567-8900</li>
                     </ul>
                 </div>
                 <div class="footer-col">
