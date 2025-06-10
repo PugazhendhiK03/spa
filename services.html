@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serenity Spa | Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -35,131 +36,197 @@
         </div>
     </section>
 
-    <section class="services-section">
+    <section class="services-details">
         <div class="container">
-            <div class="service-categories">
-                <button class="category-btn active" data-category="all">All Services</button>
-                <button class="category-btn" data-category="massage">Massages</button>
-                <button class="category-btn" data-category="facial">Facials</button>
-                <button class="category-btn" data-category="body">Body Treatments</button>
-                <button class="category-btn" data-category="special">Specialty Treatments</button>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card" data-category="massage">
-                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Swedish Massage">
-                    <div class="service-info">
-                        <h3>Swedish Massage</h3>
-                        <p class="price">$85 / 60 min</p>
-                        <p>A gentle, relaxing massage that improves circulation and relieves muscle tension.</p>
-                        <a href="booking.html" class="btn">Book Now</a>
+            <div class="service-category" id="massage">
+                <h2>Massage Therapies</h2>
+                <div class="service-items">
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Swedish Massage">
+                        <div class="service-info">
+                            <h3>Swedish Massage</h3>
+                            <p class="price">$85 - 60 min / $120 - 90 min</p>
+                            <p>A gentle, relaxing full-body massage that uses long strokes, kneading, and circular movements to promote relaxation and improve circulation.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Reduces muscle tension</li>
+                                <li><i class="fas fa-check"></i> Improves circulation</li>
+                                <li><i class="fas fa-check"></i> Promotes relaxation</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
                     </div>
-                </div>
-                <div class="service-card" data-category="massage">
-                    <img src="https://images.unsplash.com/photo-1544551763-77a4570ac6a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Deep Tissue Massage">
-                    <div class="service-info">
-                        <h3>Deep Tissue Massage</h3>
-                        <p class="price">$95 / 60 min</p>
-                        <p>Targets deeper layers of muscle and connective tissue to relieve chronic pain.</p>
-                        <a href="booking.html" class="btn">Book Now</a>
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Deep Tissue Massage">
+                        <div class="service-info">
+                            <h3>Deep Tissue Massage</h3>
+                            <p class="price">$95 - 60 min / $135 - 90 min</p>
+                            <p>A more intense massage that targets the deeper layers of muscle and connective tissue to relieve chronic muscle tension and pain.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Relieves chronic pain</li>
+                                <li><i class="fas fa-check"></i> Breaks up scar tissue</li>
+                                <li><i class="fas fa-check"></i> Reduces inflammation</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
                     </div>
-                </div>
-                <div class="service-card" data-category="massage">
-                    <img src="https://images.unsplash.com/photo-1544168213-4ffdfa6bcaa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hot Stone Therapy">
-                    <div class="service-info">
-                        <h3>Hot Stone Therapy</h3>
-                        <p class="price">$110 / 60 min</p>
-                        <p>Warm stones melt away tension and promote deep relaxation.</p>
-                        <a href="booking.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-                <div class="service-card" data-category="facial">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Signature Facial">
-                    <div class="service-info">
-                        <h3>Signature Facial</h3>
-                        <p class="price">$75 / 50 min</p>
-                        <p>Our most popular facial featuring deep cleansing, exfoliation, and hydration.</p>
-                        <a href="booking.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-                <div class="service-card" data-category="facial">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Anti-Aging Facial">
-                    <div class="service-info">
-                        <h3>Anti-Aging Facial</h3>
-                        <p class="price">$90 / 60 min</p>
-                        <p>Targets fine lines and wrinkles with specialized serums and techniques.</p>
-                        <a href="booking.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-                <div class="service-card" data-category="body">
-                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Body Wrap">
-                    <div class="service-info">
-                        <h3>Detox Body Wrap</h3>
-                        <p class="price">$120 / 75 min</p>
-                        <p>Purify and hydrate your skin with our nutrient-rich detoxifying wrap.</p>
-                        <a href="booking.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-                <div class="service-card" data-category="body">
-                    <img src="https://images.unsplash.com/photo-1544169081-a5d6a724548a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Salt Scrub">
-                    <div class="service-info">
-                        <h3>Sea Salt Scrub</h3>
-                        <p class="price">$80 / 45 min</p>
-                        <p>Exfoliate and soften skin with mineral-rich sea salts and essential oils.</p>
-                        <a href="booking.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-                <div class="service-card" data-category="special">
-                    <img src="https://images.unsplash.com/photo-1544200175-ca7e8dc4c9e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Couples Massage">
-                    <div class="service-info">
-                        <h3>Couples Massage</h3>
-                        <p class="price">$180 / 60 min</p>
-                        <p>Enjoy side-by-side massages in our private couples suite.</p>
-                        <a href="booking.html" class="btn">Book Now</a>
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1562325951-f8b0e6e7e6ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hot Stone Massage">
+                        <div class="service-info">
+                            <h3>Hot Stone Massage</h3>
+                            <p class="price">$110 - 60 min / $150 - 90 min</p>
+                            <p>Smooth, heated stones are placed on specific points of the body and used as massage tools to relax muscles and improve energy flow.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Eases muscle stiffness</li>
+                                <li><i class="fas fa-check"></i> Promotes deep relaxation</li>
+                                <li><i class="fas fa-check"></i> Improves blood flow</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="packages">
-        <div class="container">
-            <h2 class="section-title">Spa Packages</h2>
-            <div class="packages-grid">
-                <div class="package-card">
-                    <h3>Day of Relaxation</h3>
-                    <p class="price">$220</p>
-                    <ul>
-                        <li>60-minute Swedish Massage</li>
-                        <li>Signature Facial</li>
-                        <li>Sea Salt Scrub</li>
-                        <li>Lunch & Herbal Tea</li>
-                    </ul>
-                    <a href="booking.html" class="btn">Book Package</a>
+            <div class="service-category" id="facial">
+                <h2>Facial Treatments</h2>
+                <div class="service-items">
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Basic Facial">
+                        <div class="service-info">
+                            <h3>Basic Facial</h3>
+                            <p class="price">$75 - 45 min</p>
+                            <p>A classic facial that includes cleansing, exfoliation, extractions, massage, mask, and moisturizer to maintain healthy skin.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Deep cleansing</li>
+                                <li><i class="fas fa-check"></i> Improves skin texture</li>
+                                <li><i class="fas fa-check"></i> Hydrates skin</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Anti-Aging Facial">
+                        <div class="service-info">
+                            <h3>Anti-Aging Facial</h3>
+                            <p class="price">$120 - 60 min</p>
+                            <p>This treatment targets fine lines and wrinkles with specialized serums and techniques to promote collagen production and skin elasticity.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Reduces fine lines</li>
+                                <li><i class="fas fa-check"></i> Improves skin elasticity</li>
+                                <li><i class="fas fa-check"></i> Brightens complexion</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Acne Treatment Facial">
+                        <div class="service-info">
+                            <h3>Acne Treatment Facial</h3>
+                            <p class="price">$95 - 60 min</p>
+                            <p>Designed for acne-prone skin, this treatment includes deep cleansing, exfoliation, extractions, and specialized masks to reduce breakouts.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Reduces acne</li>
+                                <li><i class="fas fa-check"></i> Minimizes pores</li>
+                                <li><i class="fas fa-check"></i> Controls oil production</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="package-card featured">
-                    <div class="featured-badge">Most Popular</div>
-                    <h3>Ultimate Spa Day</h3>
-                    <p class="price">$350</p>
-                    <ul>
-                        <li>90-minute Hot Stone Massage</li>
-                        <li>Anti-Aging Facial</li>
-                        <li>Detox Body Wrap</li>
-                        <li>Manicure & Pedicure</li>
-                        <li>Gourmet Lunch</li>
-                    </ul>
-                    <a href="booking.html" class="btn">Book Package</a>
+            </div>
+
+            <div class="service-category" id="aromatherapy">
+                <h2>Aromatherapy & More</h2>
+                <div class="service-items">
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1591348122449-02525d70379b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Aromatherapy Massage">
+                        <div class="service-info">
+                            <h3>Aromatherapy Massage</h3>
+                            <p class="price">$100 - 60 min / $140 - 90 min</p>
+                            <p>A Swedish massage enhanced with essential oils selected for your specific needs, promoting both physical and emotional well-being.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Enhances mood</li>
+                                <li><i class="fas fa-check"></i> Reduces stress</li>
+                                <li><i class="fas fa-check"></i> Boosts immunity</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1596815068934-6a8598e9a3a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Body Scrub">
+                        <div class="service-info">
+                            <h3>Body Scrub</h3>
+                            <p class="price">$80 - 45 min</p>
+                            <p>Exfoliate and rejuvenate your skin with our luxurious body scrubs that remove dead skin cells and leave your skin soft and glowing.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Exfoliates skin</li>
+                                <li><i class="fas fa-check"></i> Improves circulation</li>
+                                <li><i class="fas fa-check"></i> Promotes cell renewal</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1583947581924-a8b1d8b1b6e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Couples Massage">
+                        <div class="service-info">
+                            <h3>Couples Massage</h3>
+                            <p class="price">$220 - 60 min / $300 - 90 min</p>
+                            <p>Enjoy side-by-side massages in our private couples room, perfect for anniversaries, date nights, or just relaxing together.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Shared experience</li>
+                                <li><i class="fas fa-check"></i> Romantic setting</li>
+                                <li><i class="fas fa-check"></i> Synchronized treatments</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="package-card">
-                    <h3>Couples Retreat</h3>
-                    <p class="price">$500</p>
-                    <ul>
-                        <li>Side-by-side 60-minute Massages</li>
-                        <li>Facials for Two</li>
-                        <li>Private Jacuzzi Session</li>
-                        <li>Champagne & Chocolate</li>
-                    </ul>
-                    <a href="booking.html" class="btn">Book Package</a>
+            </div>
+
+            <div class="service-category" id="packages">
+                <h2>Spa Packages</h2>
+                <div class="service-items">
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Day of Relaxation">
+                        <div class="service-info">
+                            <h3>Day of Relaxation</h3>
+                            <p class="price">$250 - 3 hours</p>
+                            <p>Includes Swedish massage, basic facial, manicure, and pedicure with complimentary lunch and access to our relaxation lounge.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Full-body treatment</li>
+                                <li><i class="fas fa-check"></i> Lunch included</li>
+                                <li><i class="fas fa-check"></i> Access to facilities</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ultimate Rejuvenation">
+                        <div class="service-info">
+                            <h3>Ultimate Rejuvenation</h3>
+                            <p class="price">$400 - 5 hours</p>
+                            <p>Our most comprehensive package includes deep tissue massage, anti-aging facial, full body scrub, and aromatherapy session.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Complete transformation</li>
+                                <li><i class="fas fa-check"></i> Multiple therapies</li>
+                                <li><i class="fas fa-check"></i> Long-lasting results</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="service-detail">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bridal Package">
+                        <div class="service-info">
+                            <h3>Bridal Package</h3>
+                            <p class="price">$350 - 4 hours</p>
+                            <p>Special preparation for the big day including facial, massage, manicure, pedicure, and makeup trial with champagne.</p>
+                            <ul class="benefits">
+                                <li><i class="fas fa-check"></i> Bridal preparation</li>
+                                <li><i class="fas fa-check"></i> Makeup trial</li>
+                                <li><i class="fas fa-check"></i> Champagne toast</li>
+                            </ul>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,8 +234,8 @@
 
     <section class="cta">
         <div class="container">
-            <h2>Custom Packages Available</h2>
-            <p>Contact us to create a personalized spa experience tailored to your needs.</p>
+            <h2>Customized Treatments Available</h2>
+            <p>Don't see exactly what you're looking for? Contact us to create a personalized spa experience just for you.</p>
             <a href="contact.html" class="btn">Contact Us</a>
         </div>
     </section>
@@ -178,8 +245,8 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>Serenity Spa</h3>
-                    <p>Providing premium spa services to help you relax, rejuvenate, and renew.</p>
-                    <div class="social-icons">
+                    <p>Providing exceptional spa experiences since 2010. Our mission is to help you find balance and rejuvenation.</p>
+                    <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -192,31 +259,38 @@
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="booking.html">Booking</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3>Contact Info</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness Ave, City</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Spa Street, Relax City</li>
                         <li><i class="fas fa-phone"></i> (123) 456-7890</li>
                         <li><i class="fas fa-envelope"></i> info@serenityspa.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (123) 456-7890</li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Opening Hours</h3>
                     <ul>
-                        <li>Monday - Friday: 9am - 8pm</li>
-                        <li>Saturday: 9am - 6pm</li>
-                        <li>Sunday: 10am - 4pm</li>
+                        <li>Monday - Friday: 9:00 AM - 8:00 PM</li>
+                        <li>Saturday: 10:00 AM - 6:00 PM</li>
+                        <li>Sunday: 11:00 AM - 5:00 PM</li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Serenity Spa. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Serenity Spa. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/11234567890" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
