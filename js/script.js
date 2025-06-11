@@ -17,30 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Testimonial Slider
-    const testimonials = document.querySelectorAll('.testimonial');
-    const dots = document.querySelectorAll('.dot');
-    let currentTestimonial = 0;
-    
-    function showTestimonial(index) {
-        testimonials.forEach(testimonial => testimonial.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        
-        testimonials[index].classList.add('active');
-        dots[index].classList.add('active');
-        currentTestimonial = index;
-    }
-    
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => showTestimonial(index));
-    });
-    
-    // Auto-rotate testimonials
-    setInterval(() => {
-        let nextTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(nextTestimonial);
-    }, 5000);
-    
     // FAQ Accordion
     const faqQuestions = document.querySelectorAll('.faq-question');
     
@@ -54,14 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Contact Form Submission
     const contactForm = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-    
     if (contactForm) {
+        const formSuccess = document.getElementById('formSuccess');
+        
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Form validation
-            if (!validateContactForm()) {
+            if (!validateForm(this)) {
                 return;
             }
             
@@ -91,51 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    function validateContactForm() {
-        const name = document.getElementById('name');
-        const email = document.getElementById('email');
-        const message = document.getElementById('message');
-        let isValid = true;
-        
-        // Reset error states
-        name.style.borderColor = '#ddd';
-        email.style.borderColor = '#ddd';
-        message.style.borderColor = '#ddd';
-        
-        // Validate name
-        if (!name.value.trim()) {
-            name.style.borderColor = 'red';
-            isValid = false;
-        }
-        
-        // Validate email
-        if (!email.value.trim() || !isValidEmail(email.value)) {
-            email.style.borderColor = 'red';
-            isValid = false;
-        }
-        
-        // Validate message
-        if (!message.value.trim()) {
-            message.style.borderColor = 'red';
-            isValid = false;
-        }
-        
-        if (!isValid) {
-            alert('Please fill in all required fields correctly.');
-            return false;
-        }
-        
-        return true;
-    }
-    
-    function isValidEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-
-    // Booking Form Multi-step
+    // Booking Form Functionality
     const bookingForm = document.getElementById('bookingForm');
-    
     if (bookingForm) {
         // Initialize date picker
         flatpickr("#booking-date", {
@@ -149,13 +82,16 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         });
         
-        // Next button functionality
+        // Step navigation
         const nextButtons = document.querySelectorAll('.next-step');
+        const prevButtons = document.querySelectorAll('.prev-step');
+        
         nextButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const currentStep = this.closest('.form-step');
-                const nextStepNum = parseInt(this.getAttribute('data-next'));
-                const nextStep = document.querySelector(`.form-step[data-step="${nextStepNum}"]`);
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const currentStep = this.closest('.booking-form-step');
+                const nextStepNum = this.getAttribute('data-next');
+                const nextStep = document.querySelector(`.booking-form-step[data-step="${nextStepNum}"]`);
                 
                 // Validate current step before proceeding
                 if (validateStep(currentStep)) {
@@ -163,9 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     nextStep.classList.add('active');
                     
                     // Update step indicators
-                    const steps = document.querySelectorAll('.step');
-                    steps.forEach(step => {
-                        if (parseInt(step.getAttribute('data-step')) <= nextStepNum) {
+                    document.querySelectorAll('.step').forEach(step => {
+                        if (parseInt(step.getAttribute('data-step')) <= parseInt(nextStepNum)) {
                             step.classList.add('active');
                         } else {
                             step.classList.remove('active');
@@ -173,44 +108,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                     
                     // If moving to review step, populate summary
-                    if (nextStepNum === 4) {
+                    if (nextStepNum === "4") {
                         populateSummary();
                     }
-                    
-                    // Scroll to top of form
-                    window.scrollTo({
-                        top: bookingForm.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
                 }
             });
         });
         
-        // Previous button functionality
-        const prevButtons = document.querySelectorAll('.prev-step');
         prevButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const currentStep = this.closest('.form-step');
-                const prevStepNum = parseInt(this.getAttribute('data-prev'));
-                const prevStep = document.querySelector(`.form-step[data-step="${prevStepNum}"]`);
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const currentStep = this.closest('.booking-form-step');
+                const prevStepNum = this.getAttribute('data-prev');
+                const prevStep = document.querySelector(`.booking-form-step[data-step="${prevStepNum}"]`);
                 
                 currentStep.classList.remove('active');
                 prevStep.classList.add('active');
                 
                 // Update step indicators
-                const steps = document.querySelectorAll('.step');
-                steps.forEach(step => {
-                    if (parseInt(step.getAttribute('data-step')) <= prevStepNum) {
+                document.querySelectorAll('.step').forEach(step => {
+                    if (parseInt(step.getAttribute('data-step')) <= parseInt(prevStepNum)) {
                         step.classList.add('active');
                     } else {
                         step.classList.remove('active');
                     }
-                });
-                
-                // Scroll to top of form
-                window.scrollTo({
-                    top: bookingForm.offsetTop - 100,
-                    behavior: 'smooth'
                 });
             });
         });
@@ -229,9 +150,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 3. Show success message
             showBookingSuccess(formData);
-            
-            // 4. Reset form
-            bookingForm.reset();
         });
         
         // Terms and Policy modal links
@@ -273,7 +191,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Validate form step
+    // Form validation helper
+    function validateForm(form) {
+        let isValid = true;
+        const requiredFields = form.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.style.borderColor = 'red';
+                
+                // Remove error highlight when user starts typing
+                field.addEventListener('input', function() {
+                    this.style.borderColor = '#ddd';
+                });
+            }
+        });
+        
+        if (!isValid) {
+            alert('Please fill in all required fields.');
+        }
+        
+        return isValid;
+    }
+    
+    // Booking step validation
     function validateStep(step) {
         let isValid = true;
         const requiredFields = step.querySelectorAll('[required]');
@@ -378,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('success-date').textContent = `Date & Time: ${formData.get('date')} at ${formData.get('time')}`;
         document.getElementById('success-name').textContent = `Name: ${formData.get('name')}`;
     }
-
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
