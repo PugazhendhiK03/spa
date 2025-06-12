@@ -1,206 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Same head as index.html -->
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serenity Spa | Contact Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Luxe Bali Spa - Premium Men's Spa Services</title>
+    <meta name="description" content="Rejuvenation for men by men. Luxury spa treatments including Swedish, Deep Tissue, and Balinese massages.">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Serenity Spa</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                    <li><a href="booking.html" class="btn">Book Now</a></li>
+    <!-- Same header as index.html -->
+     <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="logo">Luxe Bali Spa</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="booking.html" class="btn btn--primary">Book Now</a></li>
                 </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
+                <div class="nav__mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you. Reach out with questions or to schedule your visit.</p>
+    <!-- Contact Hero -->
+    <section class="page-hero" style="background-image: url('assets/images/hero.jpg');">
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content">
+            <h1 class="page-hero__title">Contact Us</h1>
+            <p class="page-hero__subtitle">We'd love to hear from you</p>
         </div>
     </section>
 
-    <section class="contact-section">
+    <!-- Contact Info -->
+    <section class="contact-info">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <div class="info-item">
+            <div class="contact-info__grid">
+                <div class="contact-info__card">
+                    <div class="contact-info__icon">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Address</h3>
-                            <p>123 Wellness Avenue<br>City, State 12345</p>
-                        </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+91 7339541974</p>
-                        </div>
+                    <h3 class="contact-info__title">Location</h3>
+                    <p>123 Spa Street, Bandra West<br>Mumbai, Maharashtra 400050</p>
+                </div>
+                <div class="contact-info__card">
+                    <div class="contact-info__icon">
+                        <i class="fas fa-phone-alt"></i>
                     </div>
-                    <div class="info-item">
+                    <h3 class="contact-info__title">Phone</h3>
+                    <p>+91 98765 43210</p>
+                    <p>Mon-Fri: 10am-8pm</p>
+                </div>
+                <div class="contact-info__card">
+                    <div class="contact-info__icon">
                         <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@serenityspa.com</p>
-                        </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <div>
-                            <h3>WhatsApp</h3>
-                            <p>+91 7339541974</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Hours</h3>
-                            <p>Monday - Friday: 9am - 8pm<br>
-                            Saturday: 9am - 6pm<br>
-                            Sunday: 10am - 4pm</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
+                    <h3 class="contact-info__title">Email</h3>
+                    <p>info@luxebalispa.com</p>
+                    <p>bookings@luxebalispa.com</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="contact-form-map">
+        <div class="container">
+            <div class="contact-form-map__grid">
                 <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form id="contactForm" action="https://formspree.io/f/manjegll" method="POST">
-                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    <h2 class="section__title">Send Us a Message</h2>
+                    <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
+                            <label for="contact-phone">Phone</label>
+                            <input type="tel" id="contact-phone">
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject" name="subject">
-                                <option value="general">General Inquiry</option>
-                                <option value="booking">Booking Question</option>
-                                <option value="service">Service Question</option>
-                                <option value="feedback">Feedback</option>
-                            </select>
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="btn btn--primary">Send Message</button>
                     </form>
-                    <div id="formSuccess" class="form-success">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Thank You!</h3>
-                        <p>Your message has been sent successfully. We'll get back to you soon.</p>
-                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.044030822475!2d72.8215093153846!3d19.055844257628365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c96a34dc4401%3A0x3ffc07e83942b13f!2sBandra%20West%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="map-section">
-        <div class="container">
-            <h2 class="section-title">Find Us</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573291234!2d-73.98784492416496!3d40.74844097138982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689876918893!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What should I bring to my appointment?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We provide all necessary amenities including robes, slippers, and towels. You may want to bring comfortable clothing to change into after your treatments. For massages, you'll be properly draped at all times, so undergarments are optional based on your comfort level.</p>
-                    </div>
+    <!-- FAQ Section -->
+<section class="faq">
+    <div class="container">
+        <h2 class="section__title">Frequently Asked Questions</h2>
+        <div class="faq__accordion">
+            <div class="faq__item">
+                <div class="faq__question">
+                    <h3>What should I wear for my treatment?</h3>
+                    <i class="fas fa-chevron-down"></i>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How early should I arrive for my appointment?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We recommend arriving 15-20 minutes before your scheduled appointment time. This allows you to complete any necessary paperwork, change into a robe, and relax in our lounge before your treatment begins.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What is your cancellation policy?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We require 24 hours notice for cancellations or rescheduling. Appointments cancelled with less than 24 hours notice may be subject to a cancellation fee of 50% of the service price. No-shows will be charged the full price of the scheduled service.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do you offer gift certificates?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! Gift certificates are available for any amount or specific services. They can be purchased online or at our spa and never expire. Gift certificates make perfect gifts for birthdays, anniversaries, holidays, or just to show someone you care.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Are gratuities included?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Gratuities are not included in our service prices but are greatly appreciated by our staff. A standard gratuity of 15-20% is customary for spa services, similar to restaurant tipping. You may add gratuity when booking online or provide it directly to your therapist.</p>
-                    </div>
+                <div class="faq__answer">
+                    <p>For massage treatments, we recommend comfortable clothing. During the treatment, you will be properly draped for privacy. For facials, you can remain fully clothed.</p>
                 </div>
             </div>
+            <div class="faq__item">
+                <div class="faq__question">
+                    <h3>Do I need to book in advance?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq__answer">
+                    <p>We recommend booking at least 24 hours in advance to ensure your preferred time and therapist are available. However, walk-ins are welcome based on availability.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <div class="faq__question">
+                    <h3>Can I choose a male therapist?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq__answer">
+                    <p>Yes, all our therapists are highly trained male professionals specializing in treatments for men. You may request a specific therapist when booking.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <div class="faq__question">
+                    <h3>What if I'm running late?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq__answer">
+                    <p>If you arrive late, your session may be shortened to avoid delays for the next client. Full service charges will still apply.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <div class="faq__question">
+                    <h3>Are there any contraindications for massage?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq__answer">
+                    <p>Yes, if you have medical conditions such as infections, fever, open wounds, or recent surgeries, please inform us before your session. A doctor’s note may be required in some cases.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <div class="faq__question">
+                    <h3>Is tipping expected?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq__answer">
+                    <p>Tipping is appreciated but not mandatory. If you’re happy with your service, a 10-15% tip is customary.</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
+
+    <!-- Same footer as index.html -->
+     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Serenity Spa</h3>
-                    <p>Providing premium spa services to help you relax, rejuvenate, and renew.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title">Luxe Bali Spa</h3>
+                    <p class="footer__text">Rejuvenation for men by men. Premium spa treatments designed specifically for men's needs.</p>
+                    <div class="footer__social">
+                        <a href="#" class="social__link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
+                <div class="footer__col">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about.html">About Us</a></li>
@@ -208,36 +200,39 @@
                         <li><a href="booking.html">Book Now</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness Ave, City</li>
-                        <li><i class="fas fa-phone"></i> +91 7339541974</li>
-                        <li><i class="fas fa-envelope"></i> info@serenityspa.com</li>
-                        <li><i class="fab fa-whatsapp"></i> +91 7339541974</li>
+                <div class="footer__col">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <ul class="footer__contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Spa Street, Mumbai, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@luxebalispa.com</li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Opening Hours</h3>
-                    <ul>
-                        <li>Monday - Friday: 9am - 8pm</li>
-                        <li>Saturday: 9am - 6pm</li>
-                        <li>Sunday: 10am - 4pm</li>
+                <div class="footer__col">
+                    <h3 class="footer__title">Opening Hours</h3>
+                    <ul class="footer__hours">
+                        <li>Monday - Friday: 10am - 8pm</li>
+                        <li>Saturday: 9am - 9pm</li>
+                        <li>Sunday: 10am - 6pm</li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Serenity Spa. All rights reserved.</p>
+            <div class="footer__bottom">
+                <p>&copy; 2023 Luxe Bali Spa. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <div class="whatsapp-float">
-        <a href="https://wa.me/917339541974" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <script src="js/script.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/contact.js"></script>
 </body>
-        </html>
+</html>

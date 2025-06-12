@@ -3,196 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serenity Spa | Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Luxe Bali Spa - Premium Men's Spa Services</title>
+    <meta name="description" content="Rejuvenation for men by men. Luxury spa treatments including Swedish, Deep Tissue, and Balinese massages.">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Serenity Spa</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="booking.html" class="btn">Book Now</a></li>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="logo">Luxe Bali Spa</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="booking.html" class="btn btn--primary">Book Now</a></li>
                 </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
+                <div class="nav__mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Find Your Balance</h2>
-                <p>Experience ultimate relaxation and rejuvenation at our luxury spa</p>
-                <a href="booking.html" class="btn">Book Your Session</a>
-            </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">Rejuvenation for Men by Men</h1>
+            <p class="hero__subtitle">Experience premium spa treatments tailored specifically for men's needs</p>
+            <a href="booking.html" style="margin-top: 4rem;" class="btn btn--large btn--primary">Book Your Session</a>
         </div>
     </section>
 
+    <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Us</h2>
-                <p>We provide the best spa experience for our clients</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <i class="fas fa-spa"></i>
-                    <h3>Professional Therapists</h3>
-                    <p>Our certified therapists provide personalized treatments to meet your needs.</p>
+            <h2 class="section__title">Why Choose Luxe Bali Spa</h2>
+            <div class="features__grid">
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="feature__title">Premium Treatments</h3>
+                    <p class="feature__desc">Expertly crafted therapies using only the finest products and techniques.</p>
                 </div>
-                <div class="feature-item">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Natural Products</h3>
-                    <p>We use only the highest quality natural and organic products in all our treatments.</p>
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="feature__title">Men's Specialists</h3>
+                    <p class="feature__desc">Our therapists understand men's unique needs and physiology.</p>
                 </div>
-                <div class="feature-item">
-                    <i class="fas fa-heart"></i>
-                    <h3>Relaxing Environment</h3>
-                    <p>Our tranquil space is designed to help you unwind and escape from daily stress.</p>
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="feature__title">Holistic Approach</h3>
+                    <p class="feature__desc">Treatments designed to relax, rejuvenate and restore balance.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="popular-services">
+    <!-- Popular Services -->
+    <section class="services">
         <div class="container">
-            <div class="section-title">
-                <h2>Popular Services</h2>
-                <p>Our most requested treatments</p>
+            <h2 class="section__title">Our Signature Services</h2>
+            <div class="services__grid">
+                <div class="service__card">
+                    <div class="service__image" style="background-image: url('assets/images/swedish.png');"></div>
+                    <div class="service__content">
+                        <h3 class="service__title">Swedish Massage</h3>
+                        <p class="service__desc">Relaxing full-body massage using long, flowing strokes to relieve muscle tension.</p>
+                        <div class="service__footer">
+                            <span class="service__price">₹1300</span>
+                            <a href="booking.html" class="btn btn--small btn--primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service__card">
+                    <div class="service__image" style="background-image: url('assets/images/deeptissue.png');"></div>
+                    <div class="service__content">
+                        <h3 class="service__title">Deep Tissue</h3>
+                        <p class="service__desc">Targeted pressure to release chronic muscle tension and knots.</p>
+                        <div class="service__footer">
+                            <span class="service__price">₹2000</span>
+                            <a href="booking.html" class="btn btn--small btn--primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service__card">
+                    <div class="service__image" style="background-image: url('assets/images/balinese.png');"></div>
+                    <div class="service__content">
+                        <h3 class="service__title">Balinese Massage</h3>
+                        <p class="service__desc">Traditional Indonesian techniques combining acupressure and aromatherapy.</p>
+                        <div class="service__footer">
+                            <span class="service__price">₹1500</span>
+                            <a href="booking.html" class="btn btn--small btn--primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Swedish Massage">
-                    <h3>Swedish Massage</h3>
-                    <p>A gentle full-body massage perfect for relaxation and stress relief.</p>
-                    <a href="services.html#massage" class="btn">Learn More</a>
-                </div>
-                <div class="service-item">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Facial Treatment">
-                    <h3>Facial Treatment</h3>
-                    <p>Rejuvenate your skin with our customized facial treatments.</p>
-                    <a href="services.html#facial" class="btn">Learn More</a>
-                </div>
-                <div class="service-item">
-                    <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Aromatherapy">
-                    <h3>Aromatherapy</h3>
-                    <p>Enhance physical and emotional well-being through essential oils.</p>
-                    <a href="services.html#aromatherapy" class="btn">Learn More</a>
-                </div>
-            </div>
-            <div class="text-center">
-                <a href="services.html" class="btn">View All Services</a>
+            <div class="section__cta">
+                <a href="services.html" class="btn btn--secondary">View All Services</a>
             </div>
         </div>
     </section>
 
+    <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <div class="section-title">
-                <h2>What Our Clients Say</h2>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <p>"The best spa experience I've ever had! The staff was incredibly professional and the atmosphere was so relaxing."</p>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
-                        <h4>Sarah Johnson</h4>
+            <h2 class="section__title">What Our Clients Say</h2>
+            <div class="testimonial__slider">
+                <div class="testimonial__slide active">
+                    <div class="testimonial__content">
+                        <p>"The best massage experience I've had. The therapists at Luxe Bali Spa understand exactly what men need to relieve stress and tension."</p>
+                        <div class="testimonial__author">
+                            <span class="testimonial__name">Rahul Sharma</span>
+                            <span class="testimonial__role">Regular Client</span>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial">
-                    <p>"I've been coming here for years. Their deep tissue massage works wonders for my back pain."</p>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Brown">
-                        <h4>Michael Brown</h4>
+                <div class="testimonial__slide">
+                    <div class="testimonial__content">
+                        <p>"After a week of intense workouts, the deep tissue massage worked wonders on my sore muscles. Highly recommended for athletes."</p>
+                        <div class="testimonial__author">
+                            <span class="testimonial__name">Vikram Patel</span>
+                            <span class="testimonial__role">Fitness Trainer</span>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial">
-                    <p>"The facial treatment left my skin glowing for days. Highly recommend this place!"</p>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Davis">
-                        <h4>Emily Davis</h4>
+                <div class="testimonial__slide">
+                    <div class="testimonial__content">
+                        <p>"The ambiance is perfect for relaxation. The Swedish massage helped me unwind after months of work stress. Will definitely be back."</p>
+                        <div class="testimonial__author">
+                            <span class="testimonial__name">Arjun Mehta</span>
+                            <span class="testimonial__role">Corporate Executive</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slider-controls">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
+                <div class="testimonial__dots">
+                    <span class="testimonial__dot active"></span>
+                    <span class="testimonial__dot"></span>
+                    <span class="testimonial__dot"></span>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Ready to Experience Serenity?</h2>
-            <p>Book your appointment today and start your journey to relaxation</p>
-            <a href="booking.html" class="btn">Book Now</a>
+            <div class="cta__content">
+                <h2 class="cta__title">Ready to Experience True Relaxation?</h2>
+                <p class="cta__text">Book your session today and discover the Luxe Bali Spa difference.</p>
+                <div class="cta__buttons">
+                    <a href="booking.html" class="btn btn--large btn--primary">Book Now</a>
+                    <a href="contact.html" class="btn btn--large btn--secondary">Contact Us</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Serenity Spa</h3>
-                    <p>Providing exceptional spa experiences since 2010. Our mission is to help you find balance and rejuvenation.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title">Luxe Bali Spa</h3>
+                    <p class="footer__text">Rejuvenation for men by men. Premium spa treatments designed specifically for men's needs.</p>
+                    <div class="footer__social">
+                        <a href="#" class="social__link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
+                <div class="footer__col">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Spa Street, Relax City</li>
-                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
-                        <li><i class="fas fa-envelope"></i> info@serenityspa.com</li>
-                        <li><i class="fab fa-whatsapp"></i> +1 (123) 456-7890</li>
+                <div class="footer__col">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <ul class="footer__contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Spa Street, Mumbai, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@luxebalispa.com</li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Opening Hours</h3>
-                    <ul>
-                        <li>Monday - Friday: 9:00 AM - 8:00 PM</li>
-                        <li>Saturday: 10:00 AM - 6:00 PM</li>
-                        <li>Sunday: 11:00 AM - 5:00 PM</li>
+                <div class="footer__col">
+                    <h3 class="footer__title">Opening Hours</h3>
+                    <ul class="footer__hours">
+                        <li>Monday - Friday: 10am - 8pm</li>
+                        <li>Saturday: 9am - 9pm</li>
+                        <li>Sunday: 10am - 6pm</li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Serenity Spa. All Rights Reserved.</p>
+            <div class="footer__bottom">
+                <p>&copy; 2023 Luxe Bali Spa. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <div class="whatsapp-float">
-        <a href="https://wa.me/11234567890" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <script src="js/script.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/testimonials.js"></script>
 </body>
 </html>

@@ -1,212 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Same head as index.html -->
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serenity Spa | About Us</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Luxe Bali Spa - Premium Men's Spa Services</title>
+    <meta name="description" content="Rejuvenation for men by men. Luxury spa treatments including Swedish, Deep Tissue, and Balinese massages.">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Serenity Spa</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="booking.html" class="btn">Book Now</a></li>
+    <!-- Same header as index.html -->
+     <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="logo">Luxe Bali Spa</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="booking.html" class="btn btn--primary">Book Now</a></li>
                 </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
+                <div class="nav__mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>About Serenity Spa</h1>
-            <p>Our story, mission, and the team dedicated to your wellness</p>
+    <!-- About Hero -->
+    <section class="page-hero" style="background-image: url('assets/images/hero.jpg');">
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content">
+            <h1 class="page-hero__title">About Us</h1>
+            <p class="page-hero__subtitle">Our story, mission, and team</p>
         </div>
     </section>
 
-    <section class="about-story">
+    <!-- Our Story -->
+    <section class="our-story">
         <div class="container">
-            <div class="story-content">
-                <h2>Our Story</h2>
-                <p>Founded in 2010 by massage therapist Olivia Johnson, Serenity Spa began as a small studio with just two treatment rooms. Olivia's vision was to create a space where clients could escape the stresses of daily life and experience true relaxation and rejuvenation.</p>
-                <p>What started as a modest operation has grown into one of the most respected spas in the region, with 12 treatment rooms, a full-service salon, and a team of 25 dedicated professionals. Despite our growth, we've maintained our commitment to personalized care and exceptional service.</p>
-                <p>Over the years, we've expanded our services to include the latest spa technologies and treatments while staying true to our roots in holistic wellness. Our clients' loyalty and satisfaction have been the driving force behind our success.</p>
-            </div>
-            <div class="story-image">
-                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Our Spa Facility">
+            <div class="our-story__content">
+                <h2 class="section__title">Our Story</h2>
+                <div class="our-story__grid">
+                    <div class="our-story__text">
+                        <p>Founded in 2015, Luxe Bali Spa began with a simple vision: to create a sanctuary where men could experience premium spa treatments in an environment designed specifically for them.</p>
+                        <p>Our founder, Arjun Kapoor, recognized the need for a space where men could comfortably enjoy the benefits of spa therapies without the typical spa stereotypes.</p>
+                        <p>What started as a single treatment room has grown into Mumbai's premier men's spa, known for our expertise in male-specific treatments and our commitment to excellence.</p>
+                    </div>
+                    <div class="our-story__image">
+                        <img src="assets/images/founder.jpg" alt="Luxe Bali Spa founder">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Mission & Values -->
     <section class="mission-values">
         <div class="container">
-            <h2>Our Mission & Values</h2>
-            <div class="values-grid">
-                <div class="value-item">
-                    <i class="fas fa-heart"></i>
-                    <h3>Client-Centered Care</h3>
-                    <p>Every treatment is tailored to meet your individual needs and preferences. Your comfort and satisfaction are our top priorities.</p>
+            <h2 class="section__title">Our Mission & Values</h2>
+            <div class="mission-values__grid">
+                <!-- Mission/values cards -->
+                <div class="mission-values__card">
+                    <h3 class="mission-values__title">Client-Centric Care</h3>
+                    <p>Every treatment we offer is tailored to suit the preferences and needs of our clients. Your comfort is our top priority.</p>
                 </div>
-                <div class="value-item">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Natural Wellness</h3>
-                    <p>We believe in the healing power of nature and use organic, sustainable products whenever possible.</p>
+                <div class="mission-values__card">
+                    <h3 class="mission-values__title">Confidentiality</h3>
+                    <p>We understand that spa visits can be personal. We provide a discreet, respectful space where you can relax with confidence.</p>
                 </div>
-                <div class="value-item">
-                    <i class="fas fa-hands-helping"></i>
-                    <h3>Expertise</h3>
-                    <p>Our team consists of licensed professionals who participate in ongoing education to stay at the forefront of spa therapies.</p>
+                <div class="mission-values__card">
+                    <h3 class="mission-values__title">Authenticity</h3>
+                    <p>We stay true to traditional techniques while blending them with modern wellness trends to offer the best of both worlds.</p>
                 </div>
-                <div class="value-item">
-                    <i class="fas fa-spa"></i>
-                    <h3>Holistic Approach</h3>
-                    <p>We address wellness from all angles - physical, mental, and emotional - to provide comprehensive care.</p>
-                </div>
+                <!-- More values cards -->
             </div>
         </div>
     </section>
 
+    <!-- Team Section -->
     <section class="team">
         <div class="container">
-            <h2>Meet Our Team</h2>
-            <p>The skilled professionals dedicated to your wellness</p>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Olivia Johnson">
-                    <h3>Olivia Johnson</h3>
-                    <p class="position">Founder & Lead Therapist</p>
-                    <p>With over 20 years of experience, Olivia specializes in deep tissue and therapeutic massage.</p>
+            <h2 class="section__title">Meet Our Team</h2>
+            <div class="team__grid">
+                <!-- Team member cards -->
+                <div class="team__card">
+                    <div class="team__image" style="background-image: url('assets/images/therapist2.jpg');"></div>
+                    <div class="team__content">
+                        <h3 class="team__name">Amit Sinha</h3>
+                        <div class="team__role">Balinese Massage Expert</div>
+                        <p class="team__bio">Trained in Bali, Amit brings authentic techniques and holistic wellness to every session.</p>
+                    </div>
                 </div>
-                <div class="team-member">
-                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Sophia Martinez">
-                    <h3>Sophia Martinez</h3>
-                    <p class="position">Esthetician</p>
-                    <p>Sophia's facials are transformative, combining advanced techniques with natural products.</p>
+                <div class="team__card">
+                    <div class="team__image" style="background-image: url('assets/images/therapist3.jpg');"></div>
+                    <div class="team__content">
+                        <h3 class="team__name">Manav Desai</h3>
+                        <div class="team__role">Relaxation Specialist</div>
+                        <p class="team__bio">Known for his calming energy and expert Swedish massage, Manav ensures every client leaves fully refreshed.</p>
+                    </div>
                 </div>
-                <div class="team-member">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Wilson">
-                    <h3>James Wilson</h3>
-                    <p class="position">Massage Therapist</p>
-                    <p>James brings a unique blend of Swedish and sports massage techniques to his sessions.</p>
+
+                <!-- More team members -->
+            </div>
+        </div>
+    </section>
+
+    <section class="treatment-philosophy">
+    <div class="container">
+        <h2 class="section__title">Our Treatment Philosophy</h2>
+        <p class="treatment-philosophy__text">At Luxe Bali Spa, each massage is more than just a treatment—it's a journey. We believe wellness begins with intention, and our therapists combine skilled touch with mindful presence to deliver a deeply restorative experience. From firm pressure to gentle strokes, our techniques are curated to align body, mind, and spirit.</p>
+    </div>
+    </section>
+
+
+    <!-- Same testimonials section as index.html -->
+     <section class="testimonials">
+        <div class="container">
+            <h2 class="section__title">What Our Clients Say</h2>
+            <div class="testimonial__slider">
+                <div class="testimonial__slide active">
+                    <div class="testimonial__content">
+                        <p>"The best massage experience I've had. The therapists at Luxe Bali Spa understand exactly what men need to relieve stress and tension."</p>
+                        <div class="testimonial__author">
+                            <span class="testimonial__name">Rahul Sharma</span>
+                            <span class="testimonial__role">Regular Client</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-member">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma Davis">
-                    <h3>Emma Davis</h3>
-                    <p class="position">Aromatherapist</p>
-                    <p>Emma creates custom essential oil blends to enhance your treatment experience.</p>
+                <div class="testimonial__slide">
+                    <div class="testimonial__content">
+                        <p>"After a week of intense workouts, the deep tissue massage worked wonders on my sore muscles. Highly recommended for athletes."</p>
+                        <div class="testimonial__author">
+                            <span class="testimonial__name">Vikram Patel</span>
+                            <span class="testimonial__role">Fitness Trainer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial__slide">
+                    <div class="testimonial__content">
+                        <p>"The ambiance is perfect for relaxation. The Swedish massage helped me unwind after months of work stress. Will definitely be back."</p>
+                        <div class="testimonial__author">
+                            <span class="testimonial__name">Arjun Mehta</span>
+                            <span class="testimonial__role">Corporate Executive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial__dots">
+                    <span class="testimonial__dot active"></span>
+                    <span class="testimonial__dot"></span>
+                    <span class="testimonial__dot"></span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our Clients Say</h2>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <p>"I've been coming to Serenity Spa for five years and it's my happy place. The staff remembers my preferences and always makes me feel special."</p>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Jennifer Lee">
-                        <h4>Jennifer Lee</h4>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p>"The attention to detail is incredible. From the moment you walk in, every element is designed for relaxation and comfort."</p>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Robert Garcia">
-                        <h4>Robert Garcia</h4>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p>"I've visited spas around the world, and Serenity Spa stands out for its genuine care and exceptional service."</p>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amanda Smith">
-                        <h4>Amanda Smith</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-controls">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-            </div>
-        </div>
-    </section>
 
-    <section class="cta">
+    <!-- Same footer as index.html -->
+     <footer class="footer">
         <div class="container">
-            <h2>Experience the Serenity Difference</h2>
-            <p>Book your appointment today and discover why we're the preferred choice for wellness in our community</p>
-            <a href="booking.html" class="btn">Book Now</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Serenity Spa</h3>
-                    <p>Providing exceptional spa experiences since 2010. Our mission is to help you find balance and rejuvenation.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title">Luxe Bali Spa</h3>
+                    <p class="footer__text">Rejuvenation for men by men. Premium spa treatments designed specifically for men's needs.</p>
+                    <div class="footer__social">
+                        <a href="#" class="social__link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
+                <div class="footer__col">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Spa Street, Relax City</li>
-                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
-                        <li><i class="fas fa-envelope"></i> info@serenityspa.com</li>
-                        <li><i class="fab fa-whatsapp"></i> +1 (123) 456-7890</li>
+                <div class="footer__col">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <ul class="footer__contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Spa Street, Mumbai, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@luxebalispa.com</li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Opening Hours</h3>
-                    <ul>
-                        <li>Monday - Friday: 9:00 AM - 8:00 PM</li>
-                        <li>Saturday: 10:00 AM - 6:00 PM</li>
-                        <li>Sunday: 11:00 AM - 5:00 PM</li>
+                <div class="footer__col">
+                    <h3 class="footer__title">Opening Hours</h3>
+                    <ul class="footer__hours">
+                        <li>Monday - Friday: 10am - 8pm</li>
+                        <li>Saturday: 9am - 9pm</li>
+                        <li>Sunday: 10am - 6pm</li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Serenity Spa. All Rights Reserved.</p>
+            <div class="footer__bottom">
+                <p>&copy; 2023 Luxe Bali Spa. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <div class="whatsapp-float">
-        <a href="https://wa.me/11234567890" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <script src="js/script.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/testimonials.js"></script>
 </body>
 </html>

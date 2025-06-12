@@ -3,239 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serenity Spa | Book Now</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Luxe Bali Spa - Book Your Session</title>
+    <meta name="description" content="Book your premium men's spa experience at Luxe Bali Spa. Choose from our range of services and schedule your appointment.">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Serenity Spa</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="booking.html" class="btn active">Book Now</a></li>
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="logo">Luxe Bali Spa</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="booking.html" class="btn btn--primary">Book Now</a></li>
                 </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
+                <div class="nav__mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Book Your Appointment</h1>
-            <p>Schedule your spa experience with our easy online booking system</p>
+    <!-- Booking Hero -->
+    <section class="page-hero" style="background-image: url('assets/images/hero.jpg');">
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content">
+            <h1 class="page-hero__title">Book Your Session</h1>
+            <p class="page-hero__subtitle">Experience premium relaxation tailored for you</p>
         </div>
     </section>
 
-    <section class="booking-section">
+    <!-- Booking Process -->
+    <section class="booking-process">
         <div class="container">
+            <!-- Booking Steps Indicator -->
             <div class="booking-steps">
-                <div class="step active" data-step="1">
-                    <span>1</span>
-                    <p>Service</p>
+                <div class="booking-step active" data-step="1">
+                    <div class="booking-step__number">1</div>
+                    <div class="booking-step__title">Services</div>
                 </div>
-                <div class="step" data-step="2">
-                    <span>2</span>
-                    <p>Date & Time</p>
+                <div class="booking-step" data-step="2">
+                    <div class="booking-step__number">2</div>
+                    <div class="booking-step__title">Date & Time</div>
                 </div>
-                <div class="step" data-step="3">
-                    <span>3</span>
-                    <p>Your Info</p>
+                <div class="booking-step" data-step="3">
+                    <div class="booking-step__number">3</div>
+                    <div class="booking-step__title">Details</div>
                 </div>
-                <div class="step" data-step="4">
-                    <span>4</span>
-                    <p>Confirm</p>
+                <div class="booking-step" data-step="4">
+                    <div class="booking-step__number">4</div>
+                    <div class="booking-step__title">Confirm</div>
                 </div>
             </div>
 
-            <form id="bookingForm">
-                <!-- Step 1: Select Service -->
-                <div class="booking-form-step active" data-step="1">
-                    <h2>Select Your Service</h2>
-                    <div class="service-selection">
-                        <div class="service-option">
-                            <input type="radio" name="service" id="swedish" value="Swedish Massage" checked>
-                            <label for="swedish">
-                                <h3>Swedish Massage</h3>
-                                <p class="price">$85 / 60 min</p>
-                                <p>A gentle, relaxing massage that improves circulation and relieves muscle tension.</p>
-                            </label>
-                        </div>
-                        <div class="service-option">
-                            <input type="radio" name="service" id="deep-tissue" value="Deep Tissue Massage">
-                            <label for="deep-tissue">
-                                <h3>Deep Tissue Massage</h3>
-                                <p class="price">$95 / 60 min</p>
-                                <p>Targets deeper layers of muscle and connective tissue to relieve chronic pain.</p>
-                            </label>
-                        </div>
-                        <div class="service-option">
-                            <input type="radio" name="service" id="hot-stone" value="Hot Stone Therapy">
-                            <label for="hot-stone">
-                                <h3>Hot Stone Therapy</h3>
-                                <p class="price">$110 / 60 min</p>
-                                <p>Warm stones melt away tension and promote deep relaxation.</p>
-                            </label>
-                        </div>
-                        <div class="service-option">
-                            <input type="radio" name="service" id="facial" value="Signature Facial">
-                            <label for="facial">
-                                <h3>Signature Facial</h3>
-                                <p class="price">$75 / 50 min</p>
-                                <p>Our most popular facial featuring deep cleansing, exfoliation, and hydration.</p>
-                            </label>
-                        </div>
+            <!-- Step 1: Service Selection -->
+            <div class="booking-step__content active" data-step-content="1">
+                <h2 class="section__title">Select Your Services</h2>
+                <p class="section__subtitle">Choose one or more services for your session</p>
+                <div class="service-selection__grid">
+                    <div class="service-selection__card">
+                        <input type="checkbox" id="service-swedish" class="service-selection__checkbox" data-price="1300" data-duration="60">
+                        <label for="service-swedish" class="service-selection__label">
+                            <h3 class="service-selection__title">Swedish Massage</h3>
+                            <div class="service-selection__price">₹1300</div>
+                            <div class="service-selection__duration">60 minutes</div>
+                            <p class="service-selection__desc">Classic relaxation massage with long, flowing strokes.</p>
+                        </label>
                     </div>
-                    <div class="form-navigation">
-                        <button type="button" class="btn next-step" data-next="2">Continue</button>
+                    <div class="service-selection__card">
+                        <input type="checkbox" id="service-deep-tissue" class="service-selection__checkbox" data-price="1500" data-duration="60">
+                        <label for="service-deep-tissue" class="service-selection__label">
+                            <h3 class="service-selection__title">Deep Tissue Massage</h3>
+                            <div class="service-selection__price">₹1500</div>
+                            <div class="service-selection__duration">60 minutes</div>
+                            <p class="service-selection__desc">Targeted therapy for chronic muscle tension and pain relief.</p>
+                        </label>
+                    </div>
+                    <div class="service-selection__card">
+                        <input type="checkbox" id="service-balinese" class="service-selection__checkbox" data-price="1800" data-duration="90">
+                        <label for="service-balinese" class="service-selection__label">
+                            <h3 class="service-selection__title">Balinese Massage</h3>
+                            <div class="service-selection__price">₹1800</div>
+                            <div class="service-selection__duration">90 minutes</div>
+                            <p class="service-selection__desc">Traditional Indonesian massage combining acupressure and aromatherapy.</p>
+                        </label>
+                    </div>
+                    <div class="service-selection__card">
+                        <input type="checkbox" id="service-hot-stone" class="service-selection__checkbox" data-price="2000" data-duration="90">
+                        <label for="service-hot-stone" class="service-selection__label">
+                            <h3 class="service-selection__title">Hot Stone Massage</h3>
+                            <div class="service-selection__price">₹2000</div>
+                            <div class="service-selection__duration">90 minutes</div>
+                            <p class="service-selection__desc">Heated stones to relax muscles and improve circulation.</p>
+                        </label>
+                    </div>
+                    <div class="service-selection__card">
+                        <input type="checkbox" id="service-aromatherapy" class="service-selection__checkbox" data-price="1600" data-duration="60">
+                        <label for="service-aromatherapy" class="service-selection__label">
+                            <h3 class="service-selection__title">Aromatherapy Massage</h3>
+                            <div class="service-selection__price">₹1600</div>
+                            <div class="service-selection__duration">60 minutes</div>
+                            <p class="service-selection__desc">Essential oils combined with massage for enhanced relaxation.</p>
+                        </label>
+                    </div>
+                    <div class="service-selection__card">
+                        <input type="checkbox" id="service-sports" class="service-selection__checkbox" data-price="1700" data-duration="60">
+                        <label for="service-sports" class="service-selection__label">
+                            <h3 class="service-selection__title">Sports Massage</h3>
+                            <div class="service-selection__price">₹1700</div>
+                            <div class="service-selection__duration">60 minutes</div>
+                            <p class="service-selection__desc">Focuses on areas of the body that are overused from repetitive movements.</p>
+                        </label>
                     </div>
                 </div>
+                <div class="booking-step__navigation">
+                    <button class="btn btn--secondary" disabled>Previous</button>
+                    <button class="btn btn--primary next-step" data-next="2">Next</button>
+                </div>
+            </div>
 
-                <!-- Step 2: Date & Time -->
-                <div class="booking-form-step" data-step="2">
-                    <h2>Select Date & Time</h2>
-                    <div class="datetime-selection">
-                        <div class="form-group">
-                            <label for="booking-date">Date</label>
-                            <input type="text" id="booking-date" name="date" placeholder="Select date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="booking-time">Time</label>
-                            <select id="booking-time" name="time" required>
-                                <option value="">Select time</option>
-                                <option value="09:00 AM">09:00 AM</option>
-                                <option value="10:00 AM">10:00 AM</option>
-                                <option value="11:00 AM">11:00 AM</option>
-                                <option value="12:00 PM">12:00 PM</option>
-                                <option value="01:00 PM">01:00 PM</option>
-                                <option value="02:00 PM">02:00 PM</option>
-                                <option value="03:00 PM">03:00 PM</option>
-                                <option value="04:00 PM">04:00 PM</option>
-                                <option value="05:00 PM">05:00 PM</option>
-                                <option value="06:00 PM">06:00 PM</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="therapist">Preferred Therapist (optional)</label>
-                            <select id="therapist" name="therapist">
-                                <option value="">No preference</option>
-                                <option value="Sarah Johnson">Sarah Johnson</option>
-                                <option value="David Martinez">David Martinez</option>
-                                <option value="Emily Chen">Emily Chen</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-navigation">
-                        <button type="button" class="btn btn-outline prev-step" data-prev="1">Back</button>
-                        <button type="button" class="btn next-step" data-next="3">Continue</button>
+            <!-- Step 2: Date & Time Selection -->
+            <div class="booking-step__content" data-step-content="2">
+                <h2 class="section__title">Select Date & Time</h2>
+                <p class="section__subtitle">Choose a convenient date and time for your appointment</p>
+                <div class="datetime-selection">
+                    <input type="text" id="booking-date" class="datetime-selection__input" placeholder="Select date">
+                    <div class="time-slots">
+                        <p>Please select a date first</p>
                     </div>
                 </div>
+                <div class="booking-step__navigation">
+                    <button class="btn btn--secondary prev-step" data-prev="1">Previous</button>
+                    <button class="btn btn--primary next-step" data-next="3" disabled>Next</button>
+                </div>
+            </div>
 
-                <!-- Step 3: Your Information -->
-                <div class="booking-form-step" data-step="3">
-                    <h2>Your Information</h2>
+            <!-- Step 3: Customer Details -->
+            <div class="booking-step__content" data-step-content="3">
+                <h2 class="section__title">Your Information</h2>
+                <p class="section__subtitle">Please provide your details to complete the booking</p>
+                <form id="customer-form" class="customer-form">
                     <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="customer-name">Full Name*</label>
+                        <input type="text" id="customer-name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <label for="customer-email">Email Address*</label>
+                        <input type="email" id="customer-email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="whatsapp">WhatsApp Number (optional)</label>
-                        <input type="tel" id="whatsapp" name="whatsapp">
-                        <small>For appointment reminders and updates</small>
+                        <label for="customer-phone">Phone Number*</label>
+                        <input type="tel" id="customer-phone" name="phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="notes">Special Requests or Notes</label>
-                        <textarea id="notes" name="notes" rows="3"></textarea>
+                        <label for="customer-notes">Special Requests (Optional)</label>
+                        <textarea id="customer-notes" name="notes" rows="4"></textarea>
                     </div>
-                    <div class="form-navigation">
-                        <button type="button" class="btn btn-outline prev-step" data-prev="2">Back</button>
-                        <button type="button" class="btn next-step" data-next="4">Review Booking</button>
-                    </div>
+                    <input type="hidden" id="booking-services" name="services">
+                    <input type="hidden" id="booking-date-value" name="date">
+                    <input type="hidden" id="booking-time" name="time">
+                    <input type="hidden" id="booking-total" name="total">
+                    <input type="hidden" id="booking-duration" name="duration">
+                </form>
+                <div class="booking-step__navigation">
+                    <button class="btn btn--secondary prev-step" data-prev="2">Previous</button>
+                    <button class="btn btn--primary next-step" data-next="4">Next</button>
                 </div>
+            </div>
 
-                <!-- Step 4: Confirmation -->
-                <div class="booking-form-step" data-step="4">
-                    <h2>Review Your Booking</h2>
-                    <div class="booking-summary">
-                        <div class="summary-item">
-                            <h3>Service</h3>
-                            <p id="summary-service"></p>
-                        </div>
-                        <div class="summary-item">
-                            <h3>Date & Time</h3>
-                            <p id="summary-date"></p>
-                        </div>
-                        <div class="summary-item">
-                            <h3>Therapist</h3>
-                            <p id="summary-therapist"></p>
-                        </div>
-                        <div class="summary-item">
-                            <h3>Your Details</h3>
-                            <p id="summary-name"></p>
-                            <p id="summary-email"></p>
-                            <p id="summary-phone"></p>
-                        </div>
-                    </div>
-                    <div class="form-group terms-checkbox">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">I agree to the <a href="#" id="terms-link">Terms & Conditions</a> and <a href="#" id="policy-link">Cancellation Policy</a></label>
-                    </div>
-                    <div class="form-navigation">
-                        <button type="button" class="btn btn-outline prev-step" data-prev="3">Back</button>
-                        <button type="submit" class="btn">Confirm Booking</button>
-                    </div>
+            <!-- Step 4: Confirmation -->
+            <div class="booking-step__content" data-step-content="4">
+                <h2 class="section__title">Confirm Your Booking</h2>
+                <p class="section__subtitle">Review your booking details before confirmation</p>
+                <div class="booking-summary">
+                    <!-- Summary will be generated by JavaScript -->
                 </div>
-            </form>
-
-            <div id="bookingSuccess" class="booking-success">
-                <div class="success-icon">
-                    <i class="fas fa-check-circle"></i>
+                <div class="booking-confirmation">
+                    <button class="btn btn--primary confirm-booking">Confirm Booking</button>
                 </div>
-                <h2>Booking Confirmed!</h2>
-                <p>Thank you for booking with Serenity Spa. A confirmation has been sent to your email and WhatsApp (if provided).</p>
-                <div class="booking-details">
-                    <h3>Your Booking Details</h3>
-                    <p id="success-service"></p>
-                    <p id="success-date"></p>
-                    <p id="success-name"></p>
+                <div class="booking-step__navigation">
+                    <button class="btn btn--secondary prev-step" data-prev="3">Previous</button>
                 </div>
-                <a href="index.html" class="btn">Back to Home</a>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Success Modal (hidden by default) -->
+    <div class="modal" id="success-modal">
+        <div class="modal__content">
+            <div class="modal__icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="modal__title">Booking Confirmed!</h2>
+            <p class="modal__text">Your appointment has been successfully booked.</p>
+            <p class="modal__ref">Booking Reference: <span id="booking-reference"></span></p>
+            <div class="modal__actions">
+                <button class="btn btn--primary" id="print-receipt">Print Receipt</button>
+                <a href="index.html" class="btn btn--secondary">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Serenity Spa</h3>
-                    <p>Providing premium spa services to help you relax, rejuvenate, and renew.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title">Luxe Bali Spa</h3>
+                    <p class="footer__text">Rejuvenation for men by men. Premium spa treatments designed specifically for men's needs.</p>
+                    <div class="footer__social">
+                        <a href="#" class="social__link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
+                <div class="footer__col">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about.html">About Us</a></li>
@@ -243,74 +236,37 @@
                         <li><a href="booking.html">Book Now</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Wellness Ave, City</li>
-                        <li><i class="fas fa-phone"></i> +91 7339541974</li>
-                        <li><i class="fas fa-envelope"></i> info@serenityspa.com</li>
-                        <li><i class="fab fa-whatsapp"></i> +91 7339541974</li>
+                <div class="footer__col">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <ul class="footer__contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Spa Street, Mumbai, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@luxebalispa.com</li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Opening Hours</h3>
-                    <ul>
-                        <li>Monday - Friday: 9am - 8pm</li>
-                        <li>Saturday: 9am - 6pm</li>
-                        <li>Sunday: 10am - 4pm</li>
+                <div class="footer__col">
+                    <h3 class="footer__title">Opening Hours</h3>
+                    <ul class="footer__hours">
+                        <li>Monday - Friday: 10am - 8pm</li>
+                        <li>Saturday: 9am - 9pm</li>
+                        <li>Sunday: 10am - 6pm</li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Serenity Spa. All rights reserved.</p>
+            <div class="footer__bottom">
+                <p>&copy; 2023 Luxe Bali Spa. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <div class="whatsapp-float">
-        <a href="https://wa.me/917339541974" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-
-    <!-- Modal for Terms -->
-    <div id="termsModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Terms & Conditions</h2>
-            <div class="modal-body">
-                <h3>Booking Policy</h3>
-                <p>All appointments require a credit card to hold the reservation. We accept Visa, MasterCard, American Express, and Discover.</p>
-                
-                <h3>Cancellation Policy</h3>
-                <p>We require 24 hours notice for cancellations or rescheduling of appointments. Cancellations made less than 24 hours in advance will result in a charge of 50% of the reserved service amount. No-shows will be charged 100% of the reserved service amount.</p>
-                
-                <h3>Late Arrivals</h3>
-                <p>If you arrive late for your appointment, your treatment time may be shortened to accommodate other guests. Full payment for the scheduled service will still apply.</p>
-                
-                <h3>Health Conditions</h3>
-                <p>Please advise us of any health conditions, allergies, injuries, pregnancy, or special needs when making your appointment. Some services may not be appropriate for certain conditions.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Policy -->
-    <div id="policyModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Cancellation Policy</h2>
-            <div class="modal-body">
-                <h3>Appointment Cancellation</h3>
-                <p>Your spa treatments are reserved especially for you. We value your business and ask that you respect the spa's scheduling policies. Should you need to cancel or reschedule, please notify us at least 24 hours in advance.</p>
-                
-                <p>Cancellations made less than 24 hours in advance will result in a charge equal to 50% of the reserved service amount.</p>
-                
-                <p>"No shows" will be charged 100% of the reserved service amount.</p>
-            </div>
-        </div>
-    </div>
-
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/global.js"></script>
 </body>
-                    </html>
+</html>
