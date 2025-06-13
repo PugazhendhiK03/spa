@@ -304,7 +304,7 @@
         font-size: 2.2rem;
     }
     .hero{
-        height: auto;
+        height: 70vh;
     }
     
     .feature__card, .service__card {
