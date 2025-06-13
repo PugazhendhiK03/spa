@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     async function submitToFormspree() {
         const form = document.getElementById('customer-form');
-        form.action = 'FORM-SPREE-LINK';
+        form.action = 'https://formspree.io/f/mrgnygog';
         form.method = 'POST';
         
         // Create a hidden input for the booking reference
