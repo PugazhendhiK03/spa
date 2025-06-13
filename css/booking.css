@@ -248,6 +248,13 @@
     min-height: 120px;
 }
 
+.form-hint {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    color: var(--gray-color);
+}
+
 /* Booking Summary */
 .booking-summary {
     background-color: var(--white);
@@ -309,106 +316,144 @@
     font-size: 1.1rem;
 }
 
-/* Confirmation Page */
-.confirmation-icon {
-    font-size: 5rem;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-}
-
-.confirmation-icon i {
-    animation: scaleIn 0.5s ease-in;
-}
-
-@keyframes scaleIn {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-.confirmation-ref {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.confirmation-receipt {
-    margin: 2rem 0;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.confirmation-receipt img {
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    border: 1px solid var(--light-gray);
-    border-radius: var(--border-radius);
-    margin-bottom: 1rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Receipt Styles */
-.receipt {
+.modal__content {
     background-color: var(--white);
     padding: 2rem;
+    border-radius: var(--border-radius);
     max-width: 500px;
-    margin: 0 auto;
-    font-family: var(--font-secondary);
-}
-
-.receipt-header {
+    width: 90%;
     text-align: center;
-    margin-bottom: 2rem;
-    border-bottom: 2px dashed var(--light-gray);
-    padding-bottom: 1rem;
 }
 
-.receipt-header h2 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.receipt-body {
-    margin-bottom: 2rem;
-}
-
-.receipt-body h3 {
-    color: var(--primary-color);
+.modal__icon {
+    font-size: 4rem;
+    color: var(--secondary-color);
     margin-bottom: 1rem;
-    text-align: center;
 }
 
-.receipt-body h4 {
-    margin: 1.5rem 0 0.5rem;
+.modal__title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
-.receipt-body ul {
+.modal__text {
     margin-bottom: 1.5rem;
+    font-size: 1.1rem;
 }
 
-.receipt-body li {
-    margin-bottom: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.receipt-total {
+.modal__ref {
     font-weight: 600;
-    font-size: 1.2rem;
-    text-align: right;
-    margin-top: 1rem;
-    border-top: 2px solid var(--light-gray);
-    padding-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
-.receipt-footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--gray-color);
-    border-top: 2px dashed var(--light-gray);
-    padding-top: 1rem;
+.modal__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modal__actions .btn {
+    margin: 0.5rem;
+}
+
+/* Enhanced Error Modal */
+#error-modal .modal__content {
+    background-color: #fff8f8;
+    border-left: 5px solid #e74c3c;
+}
+
+#error-modal .modal__icon i {
+    color: #e74c3c;
+}
+
+#error-modal .modal__title {
+    color: #e74c3c;
+}
+
+#error-modal .btn--primary {
+    background-color: #1a3e4c;
+}
+
+#error-modal .btn--secondary {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#error-modal .btn--secondary:hover {
+    background-color: #c0392b;
+}
+
+/* Processing State */
+.btn--processing {
+    position: relative;
+    opacity: 0.8;
+}
+
+.btn--processing::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Alert Box */
+.alert-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-width: 90%;
+}
+
+.alert-box.show {
+    opacity: 1;
+}
+
+.alert-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -435,6 +480,10 @@
     .page-hero__title {
         font-size: 2.2rem;
     }
+    
+    .modal__actions {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 576px) {
@@ -446,7 +495,7 @@
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     }
     
-    .receipt {
+    .modal__content {
         padding: 1.5rem;
     }
 }

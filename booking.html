@@ -34,7 +34,6 @@
         </div>
     </header>
 
-    <!-- Booking Hero -->
     <section class="page-hero" style="background-image: url('assets/images/hero.jpg');">
         <div class="page-hero__overlay"></div>
         <div class="page-hero__content">
@@ -43,10 +42,8 @@
         </div>
     </section>
 
-    <!-- Booking Process -->
     <section class="booking-process">
         <div class="container">
-            <!-- Booking Steps Indicator -->
             <div class="booking-steps">
                 <div class="booking-step active" data-step="1">
                     <div class="booking-step__number">1</div>
@@ -66,7 +63,6 @@
                 </div>
             </div>
 
-            <!-- Step 1: Service Selection -->
             <div class="booking-step__content active" data-step-content="1">
                 <h2 class="section__title">Select Your Services</h2>
                 <p class="section__subtitle">Choose one or more services for your session</p>
@@ -132,7 +128,6 @@
                 </div>
             </div>
 
-            <!-- Step 2: Date & Time Selection -->
             <div class="booking-step__content" data-step-content="2">
                 <h2 class="section__title">Select Date & Time</h2>
                 <p class="section__subtitle">Choose a convenient date and time for your appointment</p>
@@ -148,7 +143,6 @@
                 </div>
             </div>
 
-            <!-- Step 3: Customer Details -->
             <div class="booking-step__content" data-step-content="3">
                 <h2 class="section__title">Your Information</h2>
                 <p class="section__subtitle">Please provide your details to complete the booking</p>
@@ -166,6 +160,11 @@
                         <input type="tel" id="customer-phone" name="phone" required>
                     </div>
                     <div class="form-group">
+                        <label for="customer-whatsapp">WhatsApp Number*</label>
+                        <input type="tel" id="customer-whatsapp" name="whatsapp" required>
+                        <small class="form-hint">We'll send booking confirmation to this number</small>
+                    </div>
+                    <div class="form-group">
                         <label for="customer-notes">Special Requests (Optional)</label>
                         <textarea id="customer-notes" name="notes" rows="4"></textarea>
                     </div>
@@ -181,7 +180,6 @@
                 </div>
             </div>
 
-            <!-- Step 4: Confirmation -->
             <div class="booking-step__content" data-step-content="4">
                 <h2 class="section__title">Confirm Your Booking</h2>
                 <p class="section__subtitle">Review your booking details before confirmation</p>
@@ -198,7 +196,6 @@
         </div>
     </section>
 
-    <!-- Success Modal (hidden by default) -->
     <div class="modal" id="success-modal">
         <div class="modal__content">
             <div class="modal__icon">
@@ -208,7 +205,7 @@
             <p class="modal__text">Your appointment has been successfully booked.</p>
             <p class="modal__ref">Booking Reference: <span id="booking-reference"></span></p>
             <div class="modal__actions">
-                <button class="btn btn--primary" id="print-receipt">Print Receipt</button>
+                <button class="btn btn--primary" id="download-receipt">Download Receipt</button>
                 <a href="index.html" class="btn btn--secondary">Back to Home</a>
             </div>
         </div>
@@ -263,10 +260,39 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="js/booking.js"></script>
     <script src="js/global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        // Check for required libraries
+        if (typeof flatpickr === 'undefined' || typeof html2canvas === 'undefined') {
+            console.error('Required libraries not loaded');
+            document.addEventListener('DOMContentLoaded', function() {
+                const errorModal = document.createElement('div');
+                errorModal.className = 'modal';
+                errorModal.id = 'error-modal';
+                errorModal.innerHTML = `
+                    <div class="modal__content">
+                        <div class="modal__icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <h2 class="modal__title">System Error</h2>
+                        <p class="modal__text">Required resources failed to load. Please refresh the page or contact support.</p>
+                        <div class="modal__actions">
+                            <button class="btn btn--primary" onclick="window.location.reload()">Refresh Page</button>
+                            <a href="tel:+919876543210" class="btn btn--secondary">
+                                <i class="fas fa-phone"></i> Call Support
+                            </a>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(errorModal);
+                errorModal.style.display = 'flex';
+            });
+        }
+    </script>
 </body>
 </html>
