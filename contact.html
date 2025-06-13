@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head as index.html -->
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxe Bali Spa - Premium Men's Spa Services</title>
-    <meta name="description" content="Rejuvenation for men by men. Luxury spa treatments including Swedish, Deep Tissue, and Balinese massages.">
+    <title>Luxe Bali Spa - Contact Us</title>
+    <meta name="description" content="Contact Luxe Bali Spa for premium men's spa services in Mumbai. Book appointments or ask questions.">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,16 +14,15 @@
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-    <!-- Same header as index.html -->
-     <header class="header">
+    <header class="header">
         <div class="header__container">
             <a href="index.html" class="logo">Luxe Bali Spa</a>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link active">Contact</a></li>
                     <li class="nav__item"><a href="booking.html" class="btn btn--primary">Book Now</a></li>
                 </ul>
                 <div class="nav__mobile-toggle">
@@ -82,28 +80,29 @@
             <div class="contact-form-map__grid">
                 <div class="contact-form">
                     <h2 class="section__title">Send Us a Message</h2>
-                    <form id="contactForm">
+                    <form id="contactForm" action="FORM-SPREE-LINK" method="POST">
                         <div class="form-group">
                             <label for="contact-name">Name</label>
-                            <input type="text" id="contact-name" required>
+                            <input type="text" id="contact-name" name="name" required>
                         </div>
                         <div class="form-group">
                             <label for="contact-email">Email</label>
-                            <input type="email" id="contact-email" required>
+                            <input type="email" id="contact-email" name="email" required>
                         </div>
                         <div class="form-group">
                             <label for="contact-phone">Phone</label>
-                            <input type="tel" id="contact-phone">
+                            <input type="tel" id="contact-phone" name="phone">
                         </div>
                         <div class="form-group">
                             <label for="contact-subject">Subject</label>
-                            <input type="text" id="contact-subject">
+                            <input type="text" id="contact-subject" name="subject">
                         </div>
                         <div class="form-group">
                             <label for="contact-message">Message</label>
-                            <textarea id="contact-message" rows="5" required></textarea>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn--primary">Send Message</button>
+                        <button type="submit" class="btn btn--primary" id="submitBtn">Send Message</button>
+                        <div id="form-status" class="form-status"></div>
                     </form>
                 </div>
                 <div class="contact-map">
@@ -114,71 +113,69 @@
     </section>
 
     <!-- FAQ Section -->
-<section class="faq">
-    <div class="container">
-        <h2 class="section__title">Frequently Asked Questions</h2>
-        <div class="faq__accordion">
-            <div class="faq__item">
-                <div class="faq__question">
-                    <h3>What should I wear for my treatment?</h3>
-                    <i class="fas fa-chevron-down"></i>
+    <section class="faq">
+        <div class="container">
+            <h2 class="section__title">Frequently Asked Questions</h2>
+            <div class="faq__accordion">
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>What should I wear for my treatment?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq__answer">
+                        <p>For massage treatments, we recommend comfortable clothing. During the treatment, you will be properly draped for privacy. For facials, you can remain fully clothed.</p>
+                    </div>
                 </div>
-                <div class="faq__answer">
-                    <p>For massage treatments, we recommend comfortable clothing. During the treatment, you will be properly draped for privacy. For facials, you can remain fully clothed.</p>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Do I need to book in advance?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq__answer">
+                        <p>We recommend booking at least 24 hours in advance to ensure your preferred time and therapist are available. However, walk-ins are welcome based on availability.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq__item">
-                <div class="faq__question">
-                    <h3>Do I need to book in advance?</h3>
-                    <i class="fas fa-chevron-down"></i>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Can I choose a male therapist?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Yes, all our therapists are highly trained male professionals specializing in treatments for men. You may request a specific therapist when booking.</p>
+                    </div>
                 </div>
-                <div class="faq__answer">
-                    <p>We recommend booking at least 24 hours in advance to ensure your preferred time and therapist are available. However, walk-ins are welcome based on availability.</p>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>What if I'm running late?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq__answer">
+                        <p>If you arrive late, your session may be shortened to avoid delays for the next client. Full service charges will still apply.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq__item">
-                <div class="faq__question">
-                    <h3>Can I choose a male therapist?</h3>
-                    <i class="fas fa-chevron-down"></i>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Are there any contraindications for massage?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Yes, if you have medical conditions such as infections, fever, open wounds, or recent surgeries, please inform us before your session. A doctor's note may be required in some cases.</p>
+                    </div>
                 </div>
-                <div class="faq__answer">
-                    <p>Yes, all our therapists are highly trained male professionals specializing in treatments for men. You may request a specific therapist when booking.</p>
-                </div>
-            </div>
-            <div class="faq__item">
-                <div class="faq__question">
-                    <h3>What if I'm running late?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq__answer">
-                    <p>If you arrive late, your session may be shortened to avoid delays for the next client. Full service charges will still apply.</p>
-                </div>
-            </div>
-            <div class="faq__item">
-                <div class="faq__question">
-                    <h3>Are there any contraindications for massage?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq__answer">
-                    <p>Yes, if you have medical conditions such as infections, fever, open wounds, or recent surgeries, please inform us before your session. A doctor’s note may be required in some cases.</p>
-                </div>
-            </div>
-            <div class="faq__item">
-                <div class="faq__question">
-                    <h3>Is tipping expected?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq__answer">
-                    <p>Tipping is appreciated but not mandatory. If you’re happy with your service, a 10-15% tip is customary.</p>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Is tipping expected?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Tipping is appreciated but not mandatory. If you're happy with your service, a 10-15% tip is customary.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-    <!-- Same footer as index.html -->
-     <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer__grid">
                 <div class="footer__col">

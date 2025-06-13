@@ -140,6 +140,26 @@
     min-height: 150px;
 }
 
+/* Form Status Message */
+.form-status {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    display: none;
+}
+
+.form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+.form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
 /* FAQ Section */
 .faq {
     padding: 4rem 0;

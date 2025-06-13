@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     async function submitToFormspree() {
         const form = document.getElementById('customer-form');
-        form.action = 'https://formspree.io/f/manjegll';
+        form.action = 'FORM-SPREE-LINK';
         form.method = 'POST';
         
         // Create a hidden input for the booking reference
@@ -605,7 +605,7 @@ document.addEventListener('DOMContentLoaded', function() {
                            `*Services:*%0A- ${servicesList}%0A%0A` +
                            `*Total Amount:* ₹${totalPrice}`;
             
-            window.open(`https://wa.me/917339541974?text=${message}`, '_blank');
+            window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
         } catch (error) {
             console.error('Failed to send owner notification:', error);
         }
