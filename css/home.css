@@ -303,6 +303,9 @@
     .hero__title {
         font-size: 2.2rem;
     }
+    .hero{
+        height: auto;
+    }
     
     .feature__card, .service__card {
         padding: 1.5rem;
