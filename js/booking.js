@@ -559,7 +559,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ${reference ? `<p class="modal__ref">Reference: ${reference}</p>` : ''}
                 <div class="modal__actions">
                     <button class="btn btn--primary" id="retry-booking">Try Again</button>
-                    <a href="tel:+919876543210" class="btn btn--secondary">
+                    <a href="tel:+919342127722" class="btn btn--secondary">
                         <i class="fas fa-phone"></i> Call Us
                     </a>
                 </div>
