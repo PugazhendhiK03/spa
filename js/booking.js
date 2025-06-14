@@ -605,7 +605,7 @@ document.addEventListener('DOMContentLoaded', function() {
                            `*Services:*%0A- ${servicesList}%0A%0A` +
                            `*Total Amount:* ₹${totalPrice}`;
             
-            window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+            window.open(`https://wa.me/919342127722?text=${message}`, '_blank');
         } catch (error) {
             console.error('Failed to send owner notification:', error);
         }
